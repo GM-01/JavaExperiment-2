@@ -46,8 +46,54 @@
 
 
 ### 六、核心代码
+#### 以下代码，是我本次实验耗时最多的时间，其中课程类中，定义了教师类的变量，并在最后对课程类地址重写中，调用教师类中的所选课程和对应的授课教师变量的值，这样可以避免出现，老师与课程冲突这个问题。
 ```
+package Experiment2;
 
+public class Teacher extends Human {     //继承Human类
+    String TeachLesson;
+    String name;
+    Teacher(int code, String name, char sex, String lesson) {
+        super(code, name, sex);          //调用Human的方法
+        this.TeachLesson = lesson;       
+        this.name = name;
+    }
+    public String toString() {           //对地址重写
+        return "教师编号:" + getCode() + " 教师姓名:" + getName() + " 性别:" + getSex() + " 所授课程:" + TeachLesson;
+    }
+}
+```
+```
+package Experiment2;
+
+public class Course {
+    int number;
+    String site;
+    String time;
+    Teacher t;                          //定义教师类变量
+    Course(int number,String site,String time,Teacher t) {
+        setNumber(number);
+        setSite(site);
+        setTime(time);
+        this.t = t;                    //设置教师类变量的值
+    }
+
+    void setNumber(int number) {
+        this.number = number;
+    }
+
+    void setSite(String site) {
+        this.site = site;
+    }
+
+    void setTime(String time) {
+        this.time = time;
+    }
+
+    public String toString() {
+        return "课程编号:"+ number +" 课程名称:"+t.TeachLesson+" 上课地点:"+site+" 时间:"+time+" 授课教师:"+t.name;
+    }
+}
 ```
 ### 七、实验结果
 ![实验运行截图](https://github.com/GM-01/JavaExperiment-2/blob/main/1603025008(1).png)
