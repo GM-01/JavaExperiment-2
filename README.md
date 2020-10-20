@@ -54,7 +54,7 @@
 ##### 16)	根据字符串型二维数组，来分课程数组，每个课程学生的姓名，组成名单，并结束程序。
 
 ### 五、流程图
-
+![流程图](https://github.com/GM-01/JavaExperiment-2/blob/main/%E9%80%89%E8%AF%BE%E7%B3%BB%E7%BB%9F%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
 
 
 ### 六、核心代码
